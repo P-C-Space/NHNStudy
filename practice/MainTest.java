@@ -8,7 +8,7 @@ public class MainTest { // MainTest 변수
     public static void main(String[] args) {
         final String message = "Hello.World!!";
         System.out.println(message);
-        temp();
+            temp();
 
         System.out.println(한글);
     }

@@ -35,7 +35,7 @@ System.err.println("9") ;
 * a는 1의 주소값을 가리킴
 * ex) 1를 가리키는 새로운 변수 b 생성 
 * a와 b는 1을 가리키며 reference count (참조 카운트) 2에 해당
-* 만약 a와 b가 사라진다면 1은 아무도 가리키지 않기 때문에 참조 카운트 -> 0 -> 가비지 컬렉터 수집 대상
+* 만약 a와 b가 사라진다면 1은 아무도 가리키지 않기 때문에 참조 카운트 -> 0 -> garbage 컬렉터 수집 대상
 
 * numbers 와 s는 모두 local 변수
 * 하지만 numbers dynamic이고 s 는 static으로 지정된다.

@@ -4,10 +4,31 @@ import static NHN2023_08_02_wed.Mathx.*;
 
 public class FibonacciTest {
 
-    public static void preCondition(){
-        if(fibonacci(-1)<0){
-            System.exit(1);
+    public static void preCondition() { // 시작 전의 예외처리
+        // if(fibonacci(-1)<0){
+        // System.exit(1);
+        // }
+        try {
+            fibonacci(-1);
+        } catch (IllegalArgumentException e) {
+            return;
         }
+        System.exit(1);
+    }
+    
+    public static void postCondition() { // 리턴의 예외처리
+        try{
+            for(int i = 0;i<100;i++){
+                fibonacci(i);
+                System.out.println(i + " ");
+            }
+        }catch(ArithmeticException e){
+            return;
+        }catch(StackOverflowError e){
+            System.out.println("n is to big");
+            return;
+        }
+        System.exit(1);
     }
 
     public static void baseCase() {
@@ -29,4 +50,5 @@ public class FibonacciTest {
         }
         System.out.println("testRecursionCase Test 완료");
     }
+
 }
