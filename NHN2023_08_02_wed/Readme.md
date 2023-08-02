@@ -26,5 +26,16 @@ public class MathxTest {
     }
 ```
 
-#### 
-* main -> os가 호출
+### 호출
+* main -> os 호출
+### Exception Hierarcy
+![image](https://github.com/P-C-Space/NHNStudy/assets/39722575/fdfffa83-39e0-43cc-8aa8-c4ee3bff17ac)
+
+* RuntimeException의 상속 ArgumentException을 직접 구현 
+```
+public class ArguementException extends RuntimeException {
+    public ArguementException(String messsage) {
+        super(messsage);
+    }
+}
+```
