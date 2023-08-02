@@ -12,6 +12,8 @@ public class MathxTest {
 ```
 ### recursion
 #### fibonacci
+![image](https://github.com/P-C-Space/NHNStudy/assets/39722575/f22fa75d-14ef-4cef-a09c-46a4d19768e3)
+
 ```
     public static int fibonacci(int n) {
         // base condition - 계산이 끝나는 지점 ----------------
