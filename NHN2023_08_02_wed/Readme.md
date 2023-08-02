@@ -140,4 +140,5 @@ factorial(3)
 * Big-O 최악
 * Big-Ω 최고
 * Big-θ 평균
-https://github.com/P-C-Space/NHNStudy/issues/4#issue-1832647527
+![image](https://github.com/P-C-Space/NHNStudy/assets/39722575/327d5981-f45e-40c3-bfb1-1f28cc6854e7)
+
