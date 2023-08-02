@@ -51,7 +51,7 @@ public class MathxTest { // name space
     // s += i;
     // }
     // return s;
-    // }
+    // }    
 
     // 변수 = (이름, 값, 범위(scope, 시계), 타입(저장 공간(크기), 값의 해석), 주소?, Life Time (라이프 타임) )
     // 이름이 (..) 간추린다. abstraction한다. -> 이름을 붙이는 행위
