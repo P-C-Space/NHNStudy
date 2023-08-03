@@ -48,3 +48,9 @@ static double sum(double...numbers){
     return s;
 }
 ```
+
+### 람다식
+* 이름 없는 함수
+```
+(x, y) -> x + y
+```
