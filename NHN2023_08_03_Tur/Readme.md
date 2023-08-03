@@ -9,6 +9,10 @@ static void sum(x, y){
     return x + y;
 }
 ```
+
+### Data
+* 연산의 집합
+
 ### Data Abstraction 데이터 추상화
 * 구현하고자 하는 프로그램이 어떤 종류의 객체들로 구성되는지 파악
 * 객체들이 갖는 데이터가 무엇인지, 수행하는 무엇인지 찾아낸다.
@@ -62,3 +66,7 @@ static void sum(x, y){
   * 연속적으로 저장하기 때문에 효율적임
 * 코드의 단순성
   * 코드의 단순성이 높아짐
+
+
+### Stack
+* empty stack 생성 -> constructor

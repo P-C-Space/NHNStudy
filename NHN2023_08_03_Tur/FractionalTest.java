@@ -8,27 +8,40 @@ public class FractionalTest {
         if (denominator == 0) {
             throw new IllegalArgumentException("denominator is to big");
         }
-        return new int[] {numerator, denominator};
+        int[] rep = new int[] {numerator, denominator};
+        normalize(rep);
+        return rep;
     }
 
     public static int numerator(int[] r) {
+        // normalize(r);
         return r[0];
     }
 
     public static int denominator(int[] r) {
+        // normalize(r);
         return r[1];
     }
 
+    private static void normalize(int[] r) {
+        int gcd = Mathx.GCD(r[0], r[1]);
+        r[0] /= gcd;
+        r[1] /= gcd;
+    }
+
     public static int[] add(int[] arr1, int[] arr2) {
-        int[] result = new int[2];
-        result[0] = numerator(arr1) * denominator(arr2) + denominator(arr1) * numerator(arr2);
-        result[1] = denominator(arr1) * denominator(arr2);
-        int gcd = Mathx.GCD(result[0], result[1]);
+        int x = numerator(arr1) * denominator(arr2) + denominator(arr1) * numerator(arr2);
+        int y = denominator(arr1) * denominator(arr2);
+        return fractional(x, y);
+    }
 
-        result[0] /= gcd;
-        result[1] /= gcd;
+    public static boolean isEqual(int[] arr1, int[] arr2) {
+        return (denominator(arr2) * numerator(arr1) == (numerator(arr2) * denominator(arr1)));
+    }
 
-        return result;
+    private static String toString(int[] arr) {
+
+        return numerator(arr) + "/" + denominator(arr);
     }
 
     public static void main(String[] args) {// throws IOException {
@@ -65,15 +78,24 @@ public class FractionalTest {
 
         System.out.println(moleculea / gcd + "/" + denominator / gcd);
 
-        int[] x = fractional(1, 2);
-        int[] y = fractional(2, 4);
+        int[] x = fractional(2, 4);
+        int[] y = fractional(1, 2);
         int[] w = fractional(4, 8);
         int[] z = fractional(5, 10);
 
         System.out.println(toString(add(fractional(1, 2), fractional(4, 8))));
+        // 주소값 저장 다르다.
+        System.out.println(add(x, y) == add(z, w));
+
+        int[][] rs = {x, y, w, z};
+        for (int[] r : rs) {
+            System.out.println(toString(r));
+        }
+        System.out.println(isEqual(x, y));
+        System.out.println(isEqual(y, w));
+        System.out.println(isEqual(w, z));
+
     }
 
-    private static String toString(int[] arr) {
-        return numerator(arr) + "/" + denominator(arr);
-    }
+
 }
