@@ -19,13 +19,13 @@ public class FibonacciTest {
     public static void postCondition() { // 리턴의 예외처리
         try{
             for(int i = 0;i<100;i++){
-                fibonacci(i);
-                System.out.println(i + " ");
+                System.out.println(i + " : "+ fibonacci(i));
             }
         }catch(ArithmeticException e){
+            System.out.println("error : n is to big");
             return;
         }catch(StackOverflowError e){
-            System.out.println("n is to big");
+            System.out.println("error : n is to big");
             return;
         }
         System.exit(1);

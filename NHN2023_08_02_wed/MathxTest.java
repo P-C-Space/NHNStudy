@@ -23,8 +23,10 @@ public class MathxTest {
         // System.err.println(Mathx.fibonacci(5));
         // MathxTest.fibonacciTest(); // fibonacci 테스트
         // MathxTest.FactorialTest(); // Factorial 테스트  
-        System.out.println("factorial(3)");
-        System.out.println(Mathx.factorial(3));
+        // System.out.println("factorial(3)");
+        // System.out.println(Mathx.factorial(3));
+
+        MathxTest.fibonacciTest();
     }
 
 }
