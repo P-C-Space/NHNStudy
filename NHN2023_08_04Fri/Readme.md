@@ -107,3 +107,4 @@ public class Fractional extends java.lang.Object{}
 * 동등한 객체는 동등한 해시 코드를 가져야 한다.
 * 이와 같은 이유로 equals를 사용할 떄 두 객체가 같은지 비교한다.
 * 만약 같다면 같은 해시 값을 가져야 하기 때문에 eqauls를 사용할때 hashcode는 필수적이다.
+![image](https://github.com/P-C-Space/NHNStudy/assets/39722575/16a3065b-4ce6-4647-8c72-940acb1b2d02)
