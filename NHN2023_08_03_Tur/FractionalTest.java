@@ -10,6 +10,7 @@ public class FractionalTest {
         }
         int[] rep = new int[] {numerator, denominator};
         normalize(rep);
+        // classInvariant(rep);
         return rep;
     }
 
