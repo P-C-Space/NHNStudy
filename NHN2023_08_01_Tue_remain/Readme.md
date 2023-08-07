@@ -1,7 +1,7 @@
 ## 2023/07/31 ~ 2023/08/01
 ### err vs out
 * 코드
-```
+```java
 System.out.println("3x3=") ;
 System.err.println("9") ;
 ```
@@ -39,7 +39,7 @@ System.err.println("9") ;
 
 * numbers 와 s는 모두 local 변수
 * 하지만 numbers dynamic이고 s 는 static으로 지정된다.
-```
+```java
 static double sum(double...numbers){
     double s = 0;
     for(double i : numbers){

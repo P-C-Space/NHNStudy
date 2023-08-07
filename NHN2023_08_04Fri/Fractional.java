@@ -3,14 +3,14 @@ package NHN2023_08_04Fri;
 // primitive operations to define (data) a type(set)
 // 데이터 설계
 // 하나의 primitive operation을 찾는 것
-public class Fractional {
-    private int numerator;
-    private int denominator;
+public class Fractional extends java.lang.Number {
+    private long numerator;
+    private long denominator;
     // private int[] rep;
 
     // private Fractional() {}
 
-    public Fractional(int numerator, int denominator) {
+    public Fractional(long numerator, long denominator) {
         if (denominator == 0) {
             throw new IllegalArgumentException("denominator is to big");
         }
@@ -18,59 +18,88 @@ public class Fractional {
         this.denominator = denominator;
 
         // rep = new int[] {numerator, denominator};
-        // normalize();
+        normalize();
         // classInvariant(rep);
 
     }
 
-    public int numerator() {
+    public long getNumerator() {
         return this.numerator;
     }
 
-    public int denominator() {
+    public long getDenominator() {
         return this.denominator;
     }
 
     private void normalize() {
-        int gcd = Mathx.GCD(numerator, denominator);
+        long gcd = Mathx.GCD(numerator, denominator);
         numerator /= gcd;
         denominator /= gcd;
     }
 
     public Fractional add(Fractional r) {
-        int x = this.numerator() * this.denominator() + this.denominator() * this.numerator();
-        int y = this.denominator() * this.denominator();
+        long x = this.getNumerator() * this.getDenominator()
+                + this.getDenominator() * this.getNumerator();
+        long y = this.getDenominator() * this.getDenominator();
         return new Fractional(x, y);
     }
 
     public boolean isEqual(Fractional that) {
         if (this == that)
             return true;
-        if (that == null) 
+        if (that == null)
             return false;
-        return (this.denominator() * that.numerator() == (this.numerator() * that.denominator()));
+        return (this.getDenominator()
+                * that.getNumerator() == (this.getNumerator() * that.getDenominator()));
     }
 
     @Override
     public String toString() {
-        return "Fractional [numerator=" + numerator + ", denominator=" + denominator + "]";
+        return "Fractional [numerator=" + numerator + ", denominator=" + denominator
+                + "]";
     }
 
     @Override
     public int hashCode() {
         final int prime = 31;
-        int result = 1;
-        result = prime * result + numerator;
-        result = prime * result + denominator;
-        return result;
+        long result = 1;
+        result = prime * result + this.getNumerator();
+        result = prime * result + this.getDenominator();
+        return (int) result;
     }
 
     @Override
     public boolean equals(Object obj) {
-        if(!(obj instanceof Fractional))
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        if (!(obj instanceof Fractional))
             return false;
         Fractional other = (Fractional) obj;
         return this.isEqual(other);
+    }
+
+    @Override
+    public int intValue() {
+        return (int) (this.longValue());
+    }
+
+    @Override
+    public long longValue() {
+        return (long) (this.getNumerator() / this.getDenominator());
+    }
+
+    @Override
+    public float floatValue() {
+        return (float) this.doubleValue();
+    }
+
+    @Override
+    public double doubleValue() {
+        return (double) this.getNumerator() / (double) this.getDenominator();
     }
 
     // public final String toString() {

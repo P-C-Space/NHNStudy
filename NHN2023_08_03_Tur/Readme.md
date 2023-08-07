@@ -1,6 +1,6 @@
 ## 2023/08/03
 * sum 문제 해결 - sum(x, y)가 x + y인지 x~y까지 모두 더하는 건지 구별하지 못하는 문제
-```
+```java
 static void sum(x, y){
     return (x + y) * (y - x + 1) / 2
 }
@@ -28,7 +28,7 @@ static void sum(x, y){
 * 클래스의 인스턴스 변수들 사이에 유지되어야 하는 제약 조건
 
 #### ex)
-```
+```java
     private int lower, upper;
 
     public Range(int lower, int upper) {

@@ -3,7 +3,7 @@
 ### constructor
 * 지정하지 않는다면 - default constructor -> 기본 public 
 * 보안상의 이유로 private로 변경
-```
+```java
 public class MathxTest {
     private MathxTest(){ // default constructor
 
@@ -16,7 +16,7 @@ public class MathxTest {
 #### fibonacci
 ![image](https://github.com/P-C-Space/NHNStudy/assets/39722575/f22fa75d-14ef-4cef-a09c-46a4d19768e3)
 
-```
+```java
     public static int fibonacci(int n) {
         // base condition - 계산이 끝나는 지점 ----------------
         if(n == 0){
@@ -38,7 +38,7 @@ public class MathxTest {
 * 입력값에 대한 예외 처리
 * RuntimeException의 상속 ArgumentException을 직접 구현 (자바의 IllegalArgumentException)
 * 입력값 -1 일때 무한루프 문제 해결
-```
+```java
     public static void preCondition() { // 시작 전의 예외처리
         try {
             fibonacci(-1);
@@ -48,7 +48,7 @@ public class MathxTest {
         System.exit(1);
     }
 ```
-```
+```java
 public class ArguementException extends RuntimeException {
     public ArguementException(String messsage) {
         super(messsage);
@@ -59,7 +59,7 @@ public class ArguementException extends RuntimeException {
 * 출력값에 대한 예외 처리
 * StackOverflow및 범위 초과에 대한 ArithmeticException 예외처리
 * fibonacci의 경우 47번째 수부터 factorial은 13번째 수부터 int 자료형 초과
-```
+```java
     public static void postCondition(){
         try{
             System.out.println(factorial(13));
@@ -91,7 +91,7 @@ public class ArguementException extends RuntimeException {
 * flase일 경우 Exception 발생
 * 다만 실행시에 java -ea 실행파일 or visual code의 setting을 변경해주어야 assert 코드가 실행이 된다. 
 * 기본값 -> 해당 라인 무시
-```
+```java
     public static void baseCase(){
 
         assert factorial(0) == 1;
