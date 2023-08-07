@@ -148,7 +148,69 @@ public class Expression {
 * interface는 개별적 역할을 하는 확장역할이다. -> 확장
 * 우리가 알고 있는 동물 -> 사람, 강아지 구조에 다른 새로운 동작에 대한 묶음을 처리하기 위한 자식클래스에 대한 개별적 상속으로 인터페이스를 사용한다. 이로써 보다 구조화시킨 객체지향 설계를 만들어낼 수 있다
 * 또 다른 이유로는 이미 구현된 동물 -> 사람, 강아지의 구조가 보다 더큰 트리 형태로 상속을 받는다면, 추상클래스에 대한 변경은 치명적이다. 이때 개별적으로 묶어 처리하면서 기존의 것들을 유지하고 기능을 추가할 수 있는 개방폐쇄의 원칙도 지킬 수 있다.
+#### abstract class
+* 부모 -> 자식 - 복사 붙여넣기
+#### interface
+* type을 정의
+* 연산(조건의 집합)
 #### ex
 * 그렇다면 Expression에 대한 코드는 어떤것을 사용해야 좋을까?
 * 물론 겹치는 것이 있지만 사실상 의미는 개별적 역할을 한다. -> Interface사용 추천
 * 굳이 사용하자면, 중복되는 멤버(변수)를 사용하는 것뿐이다. -> 추상 클래스 함수를 사용하기에는 개별적 함수가 존재하기 때문에 interface default사용이 바람직한 것으로 보인다.
+
+#### abstract class 활용
+* BinaryOperation 구현
+```java
+public abstract class BinaryOperation implements Expression {
+    private Expression expression1;
+    private Expression expression2;
+    private String operator;
+
+    protected BinaryOperation(Expression left, String string, Expression right) {
+        expression1 = left;
+        expression2 = right;
+        operator = string;
+    }
+
+    public Expression getExpression1() {
+        return expression1;
+    }
+
+    public Expression getExpression2() {
+        return expression2;
+    }
+
+    public String getOperator() {
+        return operator;
+    }
+
+    @Override
+    public String toString() {
+        return "(" + getExpression1() + getOperator() + getExpression2() + ")";
+    }
+}
+
+```
+* 상속 사용 1
+```java
+public final class Or extends BinaryOperation {
+    public Or(Expression left, Expression right) {
+        super(left, "|", right);
+    }
+}
+```
+* 상속 사용 2
+```java
+public final class Then extends BinaryOperation {
+    public Or(Expression left, Expression right) {
+        super(left, "", right);
+    }
+}
+```
+
+### Subtyping 하위 유형화
+* A와 B가 서로 서브타입
+* A는 B, B는 A로 취급될 수 있다. -> 대체 될 수 있다.
+### Subclassing 하위 클래스화
+* 사람 -> 학생 클래스를 상속 사람의 모든 속성과 메서드 상속 받고, 추가적으로 학생 클래스의 속성과 메서드를 정의하여 사용한다.
+* 이 떄 subtyping의 관계가 형성(강제적)
