@@ -152,3 +152,5 @@ public class Expression {
 * 그렇다면 Expression에 대한 코드는 어떤것을 사용해야 좋을까?
 * 물론 겹치는 것이 있지만 사실상 의미는 개별적 역할을 한다. -> Interface사용 추천
 * 굳이 사용하자면, 중복되는 멤버(변수)를 사용하는 것뿐이다. -> 추상 클래스 함수를 사용하기에는 개별적 함수가 존재하기 때문에 interface default사용이 바람직한 것으로 보인다.
+#### image
+![image](https://github.com/P-C-Space/NHNStudy/assets/39722575/6ff56e77-2365-47ac-8f76-aaf0c74f8f62)
