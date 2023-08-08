@@ -1,6 +1,6 @@
 package NHN2023_08_07_Mon.regular;
 
-public final class Or extends BinaryOperation {
+public final class Or extends BinaryOperation implements Expression  {
     // private Expression expression1;
     // private Expression expression2;
 

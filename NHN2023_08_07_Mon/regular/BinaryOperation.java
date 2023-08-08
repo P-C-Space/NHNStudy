@@ -1,6 +1,6 @@
 package NHN2023_08_07_Mon.regular;
 
-public abstract class BinaryOperation implements Expression {
+abstract class BinaryOperation {
     private Expression expression1;
     private Expression expression2;
     //private String operator;

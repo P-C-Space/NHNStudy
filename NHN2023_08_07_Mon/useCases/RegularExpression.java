@@ -1,5 +1,6 @@
 package NHN2023_08_07_Mon.useCases;
 
+import NHN2023_08_01_Tue_remain.BinaryOperation;
 import NHN2023_08_07_Mon.regular.*;
 
 public class RegularExpression {
@@ -33,5 +34,8 @@ public class RegularExpression {
          * ((ba)|(ε|(a)*)) 
          * baa
          */
+    
+    
+        BinaryOperation e = new BinaryOperation(a_ab,ba_a0n);
     }
 }

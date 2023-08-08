@@ -1,4 +1,4 @@
-package NHN2023_08_04Fri;
+package NHN2023_08_04_Fri;
 
 // primitive operations to define (data) a type(set)
 // 데이터 설계

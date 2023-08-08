@@ -1,4 +1,4 @@
-package NHN2023_08_04Fri;
+package NHN2023_08_04_Fri;
 
 public final class Multiply implements BinaryOperation{
 

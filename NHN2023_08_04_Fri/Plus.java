@@ -1,4 +1,4 @@
-package NHN2023_08_04Fri;
+package NHN2023_08_04_Fri;
 
 public final class Plus implements BinaryOperation{
 

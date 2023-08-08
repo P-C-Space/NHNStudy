@@ -1,4 +1,4 @@
-package NHN2023_08_04Fri;
+package NHN2023_08_04_Fri;
 
 @FunctionalInterface
 public interface BinaryOperation<T> {

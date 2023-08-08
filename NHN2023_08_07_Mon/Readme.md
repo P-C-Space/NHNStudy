@@ -214,3 +214,18 @@ public final class Then extends BinaryOperation {
 ### Subclassing 하위 클래스화
 * 사람 -> 학생 클래스를 상속 사람의 모든 속성과 메서드 상속 받고, 추가적으로 학생 클래스의 속성과 메서드를 정의하여 사용한다.
 * 이 떄 subtyping의 관계가 형성(강제적)
+
+### implementation
+* 인터페이스 구현
+
+### inheritance
+* 클래스가 다른 클래스의 속성과 메서드를 상속
+
+### abstract 추가 
+```java
+public abstract class BinaryOperation implements Expression {}
+
+abstract class BinaryOperation implements Expression {}
+```
+* 다음과 코드는 사용하면 useCase에서 드러내어 사용 가능하다. -> 하지만 private, protected는 abstract에서 불가능
+* 이것을 감추기 위해 default옵션을 두면된다.

@@ -1,6 +1,6 @@
 package NHN2023_08_07_Mon.regular;
 
-public final class Then extends BinaryOperation{
+public final class Then extends BinaryOperation implements Expression  {
     // private Expression expression1;
     // private Expression expression2;
     public Then(Expression left,Expression right){
