@@ -144,6 +144,7 @@ public class Expression {
 ```
 
 ### abstract class vs interface
+![image](https://github.com/P-C-Space/NHNStudy/assets/39722575/6ff56e77-2365-47ac-8f76-aaf0c74f8f62)
 * 추상 클래스는 공통된 클래스들을 묶어서 상위클래스로 만들기 위한 역할 -> 일반화
 * interface는 개별적 역할을 하는 확장역할이다. -> 확장
 * 우리가 알고 있는 동물 -> 사람, 강아지 구조에 다른 새로운 동작에 대한 묶음을 처리하기 위한 자식클래스에 대한 개별적 상속으로 인터페이스를 사용한다. 이로써 보다 구조화시킨 객체지향 설계를 만들어낼 수 있다
