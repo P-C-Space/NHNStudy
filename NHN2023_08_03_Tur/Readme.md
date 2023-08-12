@@ -32,7 +32,7 @@ static void sum(x, y){
     private int lower, upper;
 
     public Range(int lower, int upper) {
-        this.lower = lower;
+        this.lower = lower; 
         this.upper = upper;
         Invariant();
     }
@@ -45,7 +45,7 @@ static void sum(x, y){
 ```
 ### Abstraction barrier
 * 모듈 간의 결합을 줄임
-* 정보으닉
+* 정보은닉
 #### private 사용 이유
 * 캡슐화 및 정보 은닉
 * 안정성과 견고성

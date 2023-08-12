@@ -27,7 +27,7 @@ System.err.println("9") ;
 ### call by value
 * 자바는 call by value로만 작동
 * 이를 원시 타입과 참조 타입으로 나누며 원시타입(call by value), 참조타입(call by reference)
-#### 원시 타입
+#### 원시 타입 
 * stack에 변수와 값을 함께 선언 a = 1
 (stack내부에 a, 1)
 #### 참조 타입
