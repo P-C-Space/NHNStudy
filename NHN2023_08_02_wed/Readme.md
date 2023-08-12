@@ -83,7 +83,7 @@ public class ArguementException extends RuntimeException {
 #### 일반 연산
 * 오버플로우를 검사하지 않아 부정확한 결과가 반영됨
 
-* ex) 재귀식에서 기하급수적으로 늘어나는 수들에 적합하다.
+#### ex) Math -> 재귀식에서 기하급수적으로 늘어나는 수들에 적합하다.
 
 ### Assert
 * 주석에 해당하는 부분 한줄로 해결

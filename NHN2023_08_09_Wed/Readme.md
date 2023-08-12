@@ -52,7 +52,7 @@ public class Right implements Top{
 
 
 ### 복귀
-### 계산 젗라에서 같은 부분을 솎아 올려서 코드 쓰임새를 늘리는 설계 공부 (Procedural Abstraction) 
+### 계산 절차에서 같은 부분을 솎아 올려서 코드 쓰임새를 늘리는 설계 공부 (Procedural Abstraction) 
 #### sum > product > reduce, functional interface / lambda expression 으로 function (named closure) parameter로 넘기는 공부
   * Ad hoc polymorphism - Overloading
   * parametric polymorphism -> (generic methods)

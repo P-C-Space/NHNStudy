@@ -8,3 +8,4 @@
 * 8.04(금) [이동하기](https://github.com/P-C-Space/NHNStudy/tree/master/NHN2023_08_04Fri)
 * 8.07(월) [이동하기](https://github.com/P-C-Space/NHNStudy/tree/master/NHN2023_08_07_Mon)
 * 8.08(화) [이동하기]()
+* 8.09(수) [이동하기]()
