@@ -179,3 +179,11 @@ public class Test {
     > value 값의 내용에만 의존하여 동등성 판단, 값을 불변성 유지, 값을 복사하는 특징이 있고
     > reference 저장된 메모리 주소에 의존하여 동등성 판단, 값 변경 가능, 복사 발생 x, 불변성 보장 x
     * paramter passing - call by value
+    > 값을 전달하는 방식 -> call by value는 일반 변수를 call by reference는 배열을 전달한다. 
+
+## How to design code: Subtyping & patterns - why? 
+* Abstraction Data Type을 구현하는 수단으로 abstract class, interface 공부
+    * Language-oriented programming : abstract syntax tree + evaluator로 sw구조 설계
+        * data 구조가 정교하고 성숙해지면 끝내 언어 구조를 갖추게 됨
+    * Java에서 LOP 방식으로 sw 설계할 때 흔히 등장하는 논제
+    * Regular Expression의 AST를 interpreter pattern으로 evaluator(matcher)를 visitor 패턴으로 coding하는 연습
