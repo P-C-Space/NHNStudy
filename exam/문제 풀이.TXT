@@ -1,0 +1,7 @@
+FibonacciTest의 어느 method에서 무슨 Exception 던지나요? 왜 그런가요?
+recursionCase
+자료형의 크기를 넘어서기 때문이다.
+
+FractionalTest에서 AssertionError가 나지 않도록 Fractional(분수) class를 고칩니다. 왜 그렇게 고쳤나요?
+// 해시 함수의 오류 
+//기존의 코드는 각각의 해시함수로 처리했기 때문이다.
