@@ -1,29 +1,40 @@
 ## 2023/08/04
 * Data type => 연산의 집합
+
 <br>
+
 * Constructor -> 기계가 x 만드는 역할 
 * 나머지 함수들은 기계가 만들고 난 x 후처리 역할
+
 <br>
+
 * class 이름 - 연산을 묶어서 붙인 이름
 * 이름 -> 특징들을 표현하기 위해 간단히 표현하는 역할
+
 ### Object Oriented Programming(OOP)
 * 같은 의미의 코드
+
 ```
 // 문법적 장난
 move(circle, point(x,y)) -> f(a, b, c)
 circle move : point(x,y) -> a.f(b, c)
 circle.move(point(x,y))
 ```
+
 * 자바 스타일 코드 projection
+
 ```
 (name, gender, age) = person
 person.name
+
 ```
 ### 선언과 정의
+
 #### 선언
 * 선언은 메모리 할당 or 초기화 X
 * 선언을 함으로써 이름을 명확하게 표시 -> 사용될 것을 의미(변수명으로 어떻게 사용할 지 추측)
 * 데이터 타입 -> 어떤 값 메모리를 할당할지 알려줌
+
 #### 정의
 * 정의는 메모리 할당 및 초기화 실행 
 * 미리 선언했던 object에 메모리와 값을 할당
